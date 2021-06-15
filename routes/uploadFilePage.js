@@ -57,7 +57,7 @@ Router.post("/" , upload.single('image') ,(req , res)=>{
 
     newImgModel.save();
 
-    return res.sendStatus(200);
+    return res.status(200).json({"status" : "everything ok"});
 });
 
 module.exports=Router;
